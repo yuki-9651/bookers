@@ -1,7 +1,7 @@
 class BookController < ApplicationController
   
   def new
-    @books = Book.new
+    @book = Book.new
   end
   
   def create
@@ -22,6 +22,7 @@ class BookController < ApplicationController
   end
 
   def edit
+    @book = Book.find(params[:id])
   end
   
   def destroy
